@@ -47,16 +47,6 @@ public class Book implements Comparable<Book>{
     }
 
     @Override
-    public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", author='" + author + '\'' +
-                ", title='" + title + '\'' +
-                ", yearPublished=" + yearPublished +
-                '}';
-    }
-
-    @Override
     public int compareTo(Book b) {
 
         return getTitle().compareTo(b.getTitle());
