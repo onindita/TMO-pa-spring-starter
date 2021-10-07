@@ -12,6 +12,7 @@ public class LibraryController {
     @Autowired
     public LibraryService libraryService;
 
+
     @GetMapping("/health")
     public void health() {
 
@@ -20,12 +21,15 @@ public class LibraryController {
     @PostMapping("/api/books")
     @ResponseStatus(HttpStatus.CREATED)
     public Book addBooks(@RequestBody Book newBook){
+
         return libraryService.addBook(newBook);
     }
 
     @GetMapping("/api/books")
-    public List<Book> getBooks(){
-        return libraryService.getAllBooks();
+    public Books getBooks(){
+        Books books = new Books();
+        books.setBooks(libraryService.getAllBooks());
+        return books;
     }
 
     @DeleteMapping("/api/books")
