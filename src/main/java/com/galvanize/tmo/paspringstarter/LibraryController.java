@@ -30,7 +30,7 @@ public class LibraryController {
 
     @DeleteMapping("/api/books")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public String deleteBooks(){
-        return libraryService.deleteAllBooks();
+    public void deleteBooks(){
+        libraryService.deleteAllBooks();
     }
 }
