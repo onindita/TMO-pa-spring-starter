@@ -11,12 +11,15 @@ import java.util.List;
 public class LibraryService {
 
 
-    List<Book> books = new ArrayList<>();
+    ArrayList<Book> booklist = new ArrayList<>();
 
     public List<Book> getAllBooks(){
-        Collections.sort(books);
-        return books;
+        
+        Collections.sort(booklist);
+        return booklist;
     }
+
+
 
     public Book addBook(Book newBook){
 
@@ -24,7 +27,7 @@ public class LibraryService {
 
         newBook.setId(newId);
 
-        books.add(newBook);
+        booklist.add(newBook);
 
         return newBook;
 
@@ -32,8 +35,10 @@ public class LibraryService {
 
     public void deleteAllBooks(){
 
-        books.removeAll(books);
+        booklist.removeAll(booklist);
     }
+
+
 
 }
 
