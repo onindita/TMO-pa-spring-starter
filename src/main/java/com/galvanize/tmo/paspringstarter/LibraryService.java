@@ -30,14 +30,10 @@ public class LibraryService {
 
     }
 
-    public String deleteAllBooks(){
+    public void deleteAllBooks(){
 
         books.removeAll(books);
-
-        return "None";
     }
-
-
 
 }
 
